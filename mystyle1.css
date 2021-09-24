@@ -1,0 +1,102 @@
+body {font-family: 'Open Sans', sans-serif;background-color: white;}
+
+.left-main {float:left;float: left; width:30%;border-right: solid 1px cadetblue;}
+.left-main .row{float: left;} 
+.left-sidebar {border-bottom: solid 1px cadetblue;}
+
+.left-sidebar > h2 {text-align: center;}
+.left-sidebar > h2 > ul {list-style:circle;text-align: left;font-size: 130px;}
+.lower-left-sidebar {text-align: center }
+.left-main .lower-left-sidebar .small-image {background-color: orange;border:solid 0.5px none ;
+    width:120px;height:85px;margin: 10px 7px 7px 10px;
+    text-align: center; margin:20px; padding-top: 50px; color: white;}
+
+.clear {clear:both} 
+
+/* format border list */
+ol {
+    counter-reset: li; list-style: none;  *list-style: decimal;
+}
+ol li {padding:6px 0px 6px 0px}
+ol li:before {
+    content: counter(li); counter-increment: li;color: white; background-color:black ; border: 1px solid black;
+    margin-left: -1em;   margin-right: .65em;  border-radius: 20%;  list-style-type: none;    padding: 4px 5px 5px 4px
+}
+
+/* button */
+.lower-left-sidebar .btn-viewmore{
+    background-color:orange; border: none; color: white;
+    padding: 15px 15px;text-align: center; text-decoration: none; display: inline-block;
+    font-size: 14px; padding-top: 10px; border-radius: 7%;   cursor: pointer;
+    height: 10px;   width: 80px;  float: right; margin-right: 20px;
+}
+.btn-readmore{
+    background-color:blue; border: none; color: white;
+    padding: 15px 15px;text-align: center; text-decoration: none; display: inline-block;
+    font-size: 14px;  border-radius: 7%;   cursor: pointer; padding-top: 10px;
+    height: 10px;   width: 80px;  float: left;}
+
+/* main */
+.main {border-right: 1px solid cadetblue;width:40%;float:left;margin: 5px;}
+.main-image > h1 {font-size: 60px;padding-top: 60px;text-align: center;margin-top: 0px;}
+.main-image {background-color:rgb(100,180,5) ;color:white;
+    text-align: center;height: 300px; margin-right: 3px; margin-bottom: 3px;
+    }
+.main .lower-main .medium-image > h4 {font-size:30px;margin-top: 10px;}
+.main .lower-main .medium-image > p {text-align: right; padding-right: 10px;}
+.main .lower-main{border-top: 1px solid cadetblue ;}
+.main .medium-image {background-color: blue;border:solid 0.5px none ;
+    width:250px;height:130px;margin: 10px 7px 7px 10px;
+    text-align: center; margin:20px; padding-top: 50px; color: white;float:left}
+
+/* right */
+.right-main {float:right;border-right: solid 1px cadetblue;}
+.right-main .row{float: right;} 
+.right-main  .lower-right-sidebar .small-image {background-color: rgb(210,10,0);border:solid 0.5px none ;
+    width:120px;height:85px;margin: 10px 7px 7px 10px;
+    text-align: center; margin:20px; padding-top: 50px; color: white;}
+.right-main .lower-right-sidebar .btn-viewmore{
+    background-color:rgb(210,10,0); border: none; color: white;
+    padding: 15px 15px;text-align: center; text-decoration: none; display: inline-block;
+    font-size: 14px; padding-top: 10px; border-radius: 7%;   cursor: pointer;
+    height: 10px;   width: 80px;  float: right; margin-right: 20px;
+}
+.right-sidebar {border-bottom: solid 1px cadetblue;}
+
+.right-sidebar > h2 {text-align: center;}
+.right-sidebar > h2 > ul {list-style:circle;text-align: right;font-size: 130px;} 
+
+/* content */
+.content .content-div-1{width: 30%; float: left}
+.content .content-div-1 > h3 {margin-left: 20px;} 
+.content .content-div-1 .medium-image  {background-color: purple;border:solid 0.5px none ;
+    width:380px;height:200px;margin: 10px 7px 7px 6px;
+    text-align: center; margin:20px; padding-top: 50px; margin-left: 20px; color: white;}
+.content .content-div-1 p {margin-right:10px; margin-left: 20px;}
+.content .content-div-2{width: 30%; float: left}
+.content .content-div-2 > h3 {margin-left: 30px;} 
+.content .content-div-2 .medium-image  {background-color: cyan;border:solid 0.5px none ;
+    width:380px;height:200px;margin: 10px 7px 7px 10px;margin-left: 30px;
+    text-align: center; margin:20px; padding-top: 50px; color: white}
+.content .content-div-2 p {margin-right:10px;margin-left: 30px;}
+.content .content-div-3{width: 33%; float: left}
+.content .content-div-3 > h3 {margin-left: 20px;} 
+.content .content-div-3 .medium-image  {background-color: darkblue;border:solid 0.5px none ;
+    width:380px;height:200px;margin: 10px 7px 7px 10px;margin-left: 20px;
+    text-align: center; margin:20px; padding-top: 50px; color: white}
+.content  .medium-image > h3 {font-size:50px;margin-top: 10px; padding-right: 15px;margin-left: 20px;}
+.content .content-div-3 p {margin-left:20px}
+/* footer */
+.footer{background-color: darkgray;}
+.footer .footer-info1 {display: inline-block; width:24%; margin-left: 5px;
+    height:50px;margin-bottom: 15px; }
+.footer .footer-info1 > p {text-align: left; margin-top: 15px;}
+.footer .footer-info1 ul {
+    list-style: none;
+  }
+
+.footer .footer-info1 ul li::before {
+    content: "\2022";    color: darkgray;    font-weight: bold;    display: inline-block;     width: 1em;
+    margin-left: -1em;
+  }
+
