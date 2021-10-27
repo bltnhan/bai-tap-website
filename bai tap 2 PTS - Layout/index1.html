@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "description" content = "web Page with HTML5">
+        <meta name = "keywords" content="HTML, CSS, khoa hoc Net Coaching, khoa hoc Bui Le Thanh Nhan">
+        <meta name = "viewport" content="width=device-width, intital-scale=1.0">
+        <title>bai tập 2 HTML5</title>
+        <link rel="stylesheet" href='mystyle1.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/8d387ce43c.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+        </style>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                //delegated submit handlers for the forms inside the table
+                $('#add_walkin_patient_button').on('click', function (e) {
+                    e.preventDefault();
+        
+                    //read the form data ans submit it to someurl
+                    $.post('<?php echo base_url() ?>index.php/reception/add_walkin', $('#add_walkin_patient_form').serialize(), function () {
+                        //success do something
+        
+                        // $.notify("New Patient Added Succesfully", "success",{ position:"left" });
+                        $(".add_walkin_patient_form").notify(
+                                "New Walkin Patient Added Successfully",
+                                "success",
+                                {position: "center"}
+                        );
+                        setInterval(function () {
+                            var url = "<?php echo base_url() ?>index1.hmtl/";
+                            $(location).attr('href', url);
+                        }, 3000);
+        
+                    }).fail(function () {
+                        //error do something
+                        $(".add_walkin_patient_form").notify(
+                                "There was an error please try again later or  contact the system support desk  for assistance",
+                                "error",
+                                {position: "center"}
+                        );
+        
+                    })
+                })
+        
+            });
+        
+        </script>
+                <script>
+                    function sent() {
+                        alert("Submited Form!");
+                        return true;
+                    }
+                </script>
+        
+        <script src="https://kit.fontawesome.com/8d387ce43c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class= 'header'>
+            <img src='image/logo.png' alt="give one get one" class='img1'>
+        </div>
+        <div class='main-image'>
+            <h1>Get a Free Demo of HubSpot's CMS Software </h1>
+            <p>See for yourself why over 121,000 customers from more than 120 countries trust HubSpot to power their websites. </p>
+        </div>
+
+        <div class="input-form">
+            <h3>I'm ready for a free, live demo</h3>
+            <div class="styleform">
+                    <form action="#" method="post" id="sendemail">
+                        <label for="txtFirstName">First Name*</label>
+                        <label for="txtLastName" style="margin-left: 85px;">Last Name* </label><br>
+                        <input id="txtFirstName" name="first_name" class="text" required placeholder="Input First Name" required />
+                        <input id="txtLastName" name="last_name" class="text" required placeholder="Input Last Name" required/><br>
+
+                        <label for="txtEmail" >Email *</label>
+                        <label for="txtPhone" style="margin-left: 120px;">Phone Number* </label><br>
+                        <input id="txtEmail" name="email" class="text" required placeholder="Input Email" pattern=".+@.+"/>
+                        <input id="txtPhone" name="phone" class="text" required placeholder="Input Phone Number" pattern="[0-9]{10}"/><br>
+
+                        <label for="txtCompanyName">Company Name*</label>
+                        <label for="txtWebsiteURL" style="margin-left: 50px;">Website URL* </label><br>
+                        <input id="txtCompanyName" type="text" name="txtCompanyName" required>
+                        <input id="txtWebsiteURL" type="text" name="txtWebsiteURL" required><br>
+
+                        <label for="txtCompanySize">How many employees work there?**</label><br>
+                        <select name="txtCompanySize" id="txtCompanySize" required>
+                            <option value="None">_</option>
+                            <option value="1">1</option>
+                            <option value="2 to5 ">2 to 5</option>
+                            <option value="6to10">6 to 10</option>
+                            <option value="11to25">11 to 25</option>
+                            <option value="26to50">26 to 50</option>
+                            <option value="51to200">51 to 200</option>
+                            <option value="201to1000">201 to 1000</option>
+                            <option value="1001to10000">1001 to 10000</option>
+                            <option value="over10001">10001 and more</option>
+                        </select><br>
+                        <input type="checkbox" id="confirm" name="confirm" value="confirm">
+                        <label for="confirm" id="lbl1">Subscribe to HubSpot's marketing blog </label><br>
+                        <p style="font-size: 15px;margin-left: 15px;">We're committed to your privacy. HubSpot uses the information you provide to us to 
+                            contact you about our relevant content, products, and services. You may unsubscribe from these communications at 
+                            any time. For more information, check out our <b style="text-decoration: underline;">Privacy Policy</b>.</p>
+
+                        <input type="submit" value="Get Your Free Demo" class="send" onclick="return sent() ">
+                    </form>
+                        
+
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="content">"
+            <p>HubSpot’s content management system gives you all the tools you need to create and optimize website pages with ease—with or without a developer. And since it's part of the HubSpot CRM platform, you can use that data to build a remarkable website experience. 
+
+                With HubSpot’s CMS software, you’ll be able to ...</p>
+            <ul>
+                <li>Create and publish pages with or without a developer</li>
+                <li>Optimize your site for every device, visitor, and SEO</li>
+                <li>Create dynamic, data-driven content by leveraging information from your CRM database</li>
+                <li>Analyze your site’s impact with attribution reporting </li>
+                <li>Protect your site with out-of-the-box, premium hosting and security </li>
+            </ul>
+            <p>Fill out the form to schedule a free demo of HubSpot’s CMS software 
+                that’s customized for your specific needs, or give us a call at <b style="text-decoration: underline;">877-326-1078</b>.</p>
+        </div>
+        <div class="clearfix"></div>"
+    <div class=footer>
+        <p>Copyright © 2021 HubSpot, Inc.</p>
+        <ul>
+            <li>Legal Stuff</li>
+            <li>Privacy Policy</li>
+        </ul>
+    </div>
+    </body>
+
+        
+
+</html>
